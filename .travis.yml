@@ -17,6 +17,24 @@ before_install:
 
 script: "./gradlew clean build"
 
+before_deploy:
+  - zip -r alone00
+  - mkdir -p deploy
+  - mv alone00.zip deploy/alone00.zip
+
+deploy:
+  - provider: s3
+    access_key_id:
+    $AWS_ACCESS_KEY # TRAVIS repo setting 설정 값
+    $AWS_SECRET_KEY # TRAVIS repo setting 설정 값
+
+    bucket: alone00
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private # zip
+    local_dir: deploy # before_deploy에서 생성한 디렉토리
+    wait-until-deployed: true
+
 # CI 실행 완료시 메일로 알람
 notifications:
   email:
