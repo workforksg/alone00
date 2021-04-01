@@ -33,14 +33,16 @@ deploy:
     local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
 
-- provider: codedeploy
-  access_key_id: $AWS_ACCESS_KEY # TRAVIS repo setting 설정 값
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY # TRAVIS repo setting 설정 값
     secret_access_key: $AWS_SECRET_KEY # TRAVIS repo setting 설정 값
+
     bucket: alone00
     key: alone00.zip
-
     bundle_type: zip
-    application: alone00-group
+    application: alone00
+    deployment_group: alone00-group
+
     region: ap-northeast-2
     wait-until-deployed: true
 
