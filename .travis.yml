@@ -17,7 +17,7 @@ before_install:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r alone00
+  - zip -r alone00 *
   - mkdir -p deploy
   - mv alone00.zip deploy/alone00.zip
 
