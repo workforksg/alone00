@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 public class PostsApiController {
     
-    private final String aa;
+    // 시바루짱-
 
     private final PostsService postsService;
 
