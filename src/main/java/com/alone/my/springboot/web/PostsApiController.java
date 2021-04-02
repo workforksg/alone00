@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 public class PostsApiController {
     
-    //왜 안됩닉까
+    private final String aa;
 
     private final PostsService postsService;
 
