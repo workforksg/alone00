@@ -13,6 +13,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
+    
+    //왜 안됩닉까
 
     private final PostsService postsService;
 
