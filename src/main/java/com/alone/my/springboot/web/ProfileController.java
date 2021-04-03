@@ -1,3 +1,4 @@
+/*
 package com.alone.my.springboot.web;
 
 import lombok.RequiredArgsConstructor;
@@ -24,4 +25,4 @@ public class ProfileController {
                 .findAny()
                 .orElse(defaultProfile);
     }
-}
+}*/
