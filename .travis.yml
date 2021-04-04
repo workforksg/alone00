@@ -1,21 +1,21 @@
-#language: java
-#jdk:
-#  - openjdk8
-#
-#branches:
-#  only:
-#    - master
-#
-#cache:
-#  directories:
-#    - '$HOME/.m2/repository'
-#    - '$HOME/.gradle'
-#
-#
-#before_script:
-#  - chmod +x gradlew
+language: java
 
-#script: "./gradlew clean build"
+jdk:
+  - openjdk8
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.gradle'
+
+before_script:
+  - chmod +x gradlew
+
+script: "./gradlew clean build"
 
 #before_deploy:
 #  - zip -r alone00 *
